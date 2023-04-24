@@ -1,15 +1,15 @@
-async function generateAdvice() {
+// using the [Advice Slip API](https://api.adviceslip.com) to generate the advice
+const generateAdvice = async () => {
     const url = "https://api.adviceslip.com/advice";
 
-    try {
-        const response = await axios.get(url)
-        const data = response.data.slip;
-        console.log(data)
-        adviceID.textContent =  `ADVICE #${String(data.id)}`;
-        adviceText.textContent = `"${data.advice}"`;
-        } catch (e) {
-        console.log(e);
-    }
+    await axios.get(url)
+        .then(response => {
+            const data = response.data.slip;
+            console.log(data)
+            adviceID.textContent = `ADVICE #${data.id}`;
+            adviceText.textContent = `"${data.advice}"`;
+        })
+        .catch(error => console.error(error))
 }
 
 diceButton.addEventListener('click', () => {generateAdvice()});
