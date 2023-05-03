@@ -28,7 +28,7 @@ To execute the project in your computer:
 $ git clone https://github.com/MatricksRocha/Advice-Generator.git
 ```
 
-To run the project you need to have live-server on your computer. You can install the Live Server extension on Visual Studio Code or install live-server using npm. Using the terminal you will have 2 options: install it only on the root folder of the project or install it globally on your computer (the 2nd option means that the live-server will be available everywhere on your computer).
+To run the project you need to have live-server on your computer. You can install the Live Server extension on Visual Studio Code or install live-server using npm. Using npm you will have 2 options: install it only on the root folder of the project or install it globally on your computer (the 2nd option means that the live-server will be available everywhere on your computer).
 
 <strong><u>Using Live Server Extension on VS Code:</u></strong>
 
