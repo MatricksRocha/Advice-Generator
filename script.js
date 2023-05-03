@@ -9,7 +9,6 @@ const generateAdvice = async () => {
     try {
         const response = await axios.get(url);
         const data = response.data.slip;
-        console.log(data);
         adviceID.textContent = `ADVICE #${data.id}`;
         adviceText.textContent = `"${data.advice}"`;
     } catch (error) {
@@ -17,5 +16,7 @@ const generateAdvice = async () => {
     }
     loadingScreen.style.display = "none";
 }
+
+const diceButton = document.querySelector('#diceButton');
 
 diceButton.addEventListener('click', () => {generateAdvice()});
